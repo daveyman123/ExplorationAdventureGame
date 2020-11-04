@@ -142,7 +142,7 @@ namespace ExplorationGame
                             string infrontofHouseInput;
 
 
-                            Console.WriteLine(Art.HouseArt());
+                            Console.WriteLine(Text_read_helper.ascii(@"Art\Haunted_House.txt"));
 
 
                             bool infrontofhouse = true;
@@ -173,7 +173,7 @@ namespace ExplorationGame
                                                     string HouseInput;
 
 
-                                                    Console.WriteLine(Art.HouseArt());
+                                                    Console.WriteLine(Text_read_helper.ascii(@"Art\Haunted_House.txt"));
                                                     Console.WriteLine("You enter the Haunted House wearily. The door makes a loud creek as you enter");
 
 
