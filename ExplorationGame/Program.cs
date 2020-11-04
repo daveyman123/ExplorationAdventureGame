@@ -1,7 +1,9 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Security.Cryptography.X509Certificates;
+using ExplorationGame.Scenes;
 namespace ExplorationGame
 {
     public class Item
@@ -57,21 +59,30 @@ namespace ExplorationGame
     }
     class Game
     {
- 
+        //Player
+        //TitleScene
+
+        public Title myTitleScene;
+
+        //Navigation
+        //OutsideHouseScene
+        //BowlingAlleyScene
+        //ArcadeScene
+        //LibraryScene
+
+        public Game()
+        {
+            myTitleScene = new Title(this);
+        }
+
         public static void Start()
         {
-            //Player
-            //TitleScene
-            //Navigation
-            //OutsideHouseScene
-            //BowlingAlleyScene
-            //ArcadeScene
-            //LibraryScene
+
             Console.Clear();
     
            
         }
-        public static void End()
+        public void End()
         {
             if (Goal)
             {
@@ -97,8 +108,9 @@ namespace ExplorationGame
                 Play();
             }
         }
-        public static void Play()
+        public void Play()
         {
+            myTitleScene.Run();
             Start();
             while (Run == true)
             {
@@ -126,7 +138,10 @@ namespace ExplorationGame
             }
 
             Console.WriteLine(Art.IntroArt());
-            Console.WriteLine("1) Haunted House 2) Bowling Alley 3) Library 4) Arcade 5)Exit");
+            ConsoleUtils.WriteOptions();
+
+
+
             Input = Console.ReadLine();
             if (int.TryParse(Input, out Choice))
             {
@@ -508,9 +523,10 @@ namespace ExplorationGame
     }
     class Program
     {
-        static void Main()
+        static void Main(String[] args)
         {
-            Game.Play();
+            Game myGame = new Game();
+            myGame.Play();
         }
     }
 }
