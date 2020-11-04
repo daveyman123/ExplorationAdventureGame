@@ -43,8 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Art.cs" />
+    <Compile Include="ConsoleUtils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\Scene.cs" />
+    <Compile Include="Scenes\Title.cs" />
     <Compile Include="Text_read_helper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,5 +64,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

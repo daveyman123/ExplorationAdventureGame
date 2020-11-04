@@ -60,12 +60,16 @@ namespace ExplorationGame
  
         public static void Start()
         {
+            //Player
+            //TitleScene
+            //Navigation
+            //OutsideHouseScene
+            //BowlingAlleyScene
+            //ArcadeScene
+            //LibraryScene
             Console.Clear();
-            Console.WriteLine("Adventure Game");
-            Console.WriteLine(Art.title());
-            Console.WriteLine("The goal of the game is to eradicate the ghosts from the spooky haunted house");
-            Console.WriteLine("press enter to continue");
-            Console.ReadKey();
+    
+           
         }
         public static void End()
         {
@@ -282,7 +286,7 @@ namespace ExplorationGame
                                                 else
                                                 {
 
-
+                                                    
                                                     Console.WriteLine("The door is locked");
                                                     //Console.WriteLine("Press enter to continue...");
                                                 }
