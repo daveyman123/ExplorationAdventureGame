@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Art.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="ConsoleUtils.cs" />
     <Compile Include="helper_classes\Options_helper.cs" />

@@ -63,12 +63,14 @@ namespace ExplorationGame
         public void Start()
         {
 
-            myInHouseScene.Run();
+            
             myMainOptionsScene.Run();
 
 
 
         }
+
+       
 
         //get whether ghost is defeated
         public bool getGD()

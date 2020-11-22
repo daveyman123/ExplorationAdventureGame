@@ -63,6 +63,10 @@ namespace ExplorationGame
                 
             }
         }
+        public void RemoveAll()
+        {
+            this.Inv.Clear();
+        }
         public Item returnItem(string Name)
         {
             Item selectedItem = null;

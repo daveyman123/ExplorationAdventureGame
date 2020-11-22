@@ -44,6 +44,8 @@ namespace ExplorationGame.Scenes
             "\n\n")
             ;
 
+            //ending the game could be done better in game.cs
+            MyGame.myInv.RemoveAll();
             string[] options = { "Yes", "No" };
             string art = Text_read_helper.ascii(ghostArt);
             Options_helper myOptions = new Options_helper(art, options);
