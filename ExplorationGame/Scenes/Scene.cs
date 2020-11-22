@@ -13,6 +13,7 @@ namespace ExplorationGame.Scenes
         // navigation
 
         protected Game MyGame;
+        protected Inventory Inventory;
         public Scene(Game game)
         {
             MyGame = game;
@@ -20,8 +21,10 @@ namespace ExplorationGame.Scenes
 
         virtual public void Run()
         {
-            // Runs the actual scen logic
+            // Runs the actual scene logic
             // Override in child classes
         }
+
+        
     }
 }

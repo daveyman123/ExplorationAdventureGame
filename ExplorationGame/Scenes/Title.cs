@@ -9,22 +9,48 @@ namespace ExplorationGame.Scenes
 {
     class Title : Scene
     {
+        
+        
         public Title(Game game) : base(game)
         {
-          
+            
         }
         public override void Run()
         {
-            
-            WriteLine("TItle scene is running!");
-            Console.WriteLine("Adventure Game");
-            Console.WriteLine(Text_read_helper.ascii("Art/title.txt"));
-            Console.WriteLine("The goal of the game is to eradicate the ghosts from the spooky haunted house");
-            Console.WriteLine("press enter to continue");
-            ConsoleUtils.WaitForKeyPress();
+            string titleCredit = Text_read_helper.ascii("title") +
+            "\n" +
+            "The goal of the game is to eradicate the ghosts from the spooky haunted house" +
+            "\n" +
+            "Would you like to play?" +
+            "\n"
+            ;
 
+            string[] options = { "Yes", "No", "Credits"};
+            Options_helper myOptions = new Options_helper(titleCredit, options);
+           
+           
+            
+            
+
+            int choice = myOptions.MenuChoice();
+
+            switch (choice)
+            {
+                case 1:
+                    MyGame.myMainOptionsScene.Run();
+                    return;
+                case 2:
+                    ConsoleUtils.QuitConsole();
+                    return;
+                case 3:
+                    MyGame.myCreditsScene.Run();
+                    return;
+                    
+
+            }
             
         }
 
+  
     }
 }

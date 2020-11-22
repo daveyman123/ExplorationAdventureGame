@@ -43,21 +43,57 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Art.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="ConsoleUtils.cs" />
+    <Compile Include="helper_classes\Options_helper.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Items.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\Library.cs" />
+    <Compile Include="Scenes\BowlingAlley.cs" />
+    <Compile Include="Scenes\Arcade.cs" />
+    <Compile Include="Scenes\InHouse.cs" />
+    <Compile Include="Scenes\Door.cs" />
+    <Compile Include="Scenes\House.cs" />
+    <Compile Include="Scenes\Kitchen.cs" />
+    <Compile Include="Scenes\LivingRoom.cs" />
     <Compile Include="Scenes\Scene.cs" />
+    <Compile Include="Scenes\MainOptions.cs" />
+    <Compile Include="Scenes\CreditsScene.cs" />
     <Compile Include="Scenes\Title.cs" />
-    <Compile Include="Text_read_helper.cs" />
+    <Compile Include="helper_classes\Text_read_helper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Art\Ghost.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Art\GhostDefeated.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Art\LibraryComp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Art\Library.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Art\BowlingAlley.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Art\Arcade.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Art\lock.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Art\Main.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Art\title.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="App.config" />
-    <Content Include="Art\blah.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Art\Haunted_House.txt">

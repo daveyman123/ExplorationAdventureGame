@@ -9,14 +9,15 @@ namespace ExplorationGame
     class Text_read_helper
     {
 
-        public static String ascii(String FileUrl)
+        public static String ascii(string FileName)
         {
 
-
+            string FileUrl = "Art/" + FileName + ".txt";
 
             //file lines
-            string[] lines = File.ReadAllLines(FileUrl);
 
+            //string[] lines = File.ReadAllLines(fileFormat);
+           
             //loop through each file line
             string text = File.ReadAllText(FileUrl);
             return text;

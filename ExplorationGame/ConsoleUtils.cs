@@ -18,9 +18,15 @@ namespace ExplorationGame
             ReadLine();
         }
 
-        public static void WriteOptions()
+        public static void QuitConsole()
         {
-            Console.WriteLine("1) Haunted House 2) Bowling Alley 3) Library 4) Arcade 5) Exit");
+            Console.WriteLine("you are about to exit the game");
+            Console.WriteLine("press any key to continue...");
+            Console.ReadLine();
+            Environment.Exit(0);
         }
+
+  
+
     }
 }
