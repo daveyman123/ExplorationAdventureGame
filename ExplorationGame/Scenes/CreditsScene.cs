@@ -57,14 +57,15 @@ namespace ExplorationGame.Scenes
             //ending the game could be done better in game.cs
             MyGame.myInv.RemoveAll();
 
-            Console.ForegroundColor = ConsoleColor.Blue;
+           
             string[] options = { "Yes", "No, Exit Game" };
             string art = Text_read_helper.ascii(ghostArt);
             Options_helper myOptions = new Options_helper(art, options);
-           
-           
             
-            
+
+
+
+
 
             int choice = myOptions.MenuChoice();
 
