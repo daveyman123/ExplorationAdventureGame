@@ -39,7 +39,7 @@ namespace ExplorationGame
             int number;
             if (this.ItemsLst.Count > 0)
             {
-                number = randomNumber.Next(ItemsLst.Count);
+                number = randomNumber.Next(ItemsLst.Count-1);
                 Item itm = ItemsLst[number];
                 return itm;
 

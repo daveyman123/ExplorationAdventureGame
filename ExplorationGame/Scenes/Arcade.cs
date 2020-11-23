@@ -15,6 +15,7 @@ namespace ExplorationGame.Scenes
         }
         public override void Run()
         {
+
             Console.WriteLine("clattering and ringing of various arcade machines permiates through the dark room");
             string[] op = { "talk to the locals", "insert token and use the fortune teller", "leave Arcade", "Exit Game" };
             string Art = Text_read_helper.ascii("Arcade");
@@ -32,6 +33,7 @@ namespace ExplorationGame.Scenes
                     
                     return;
                 case 2:
+
                     if (MyGame.myInv.Contains("Arcade token"))
                     {
                        

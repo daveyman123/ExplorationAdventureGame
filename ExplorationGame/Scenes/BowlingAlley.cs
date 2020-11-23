@@ -29,10 +29,11 @@ namespace ExplorationGame.Scenes
         }
         public override void Run()
         {
-            
-            
-          
-            
+
+           
+
+
+
             Console.WriteLine("The sound of pins being struck and people chattering around the alley can be heard in the distance");
             //your options are
             string[] op = { "to rent some bowling shoes (this step feels vaguely important)", "Bowl", "Leave Alley", "Exit Game" };
