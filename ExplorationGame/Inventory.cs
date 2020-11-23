@@ -40,17 +40,16 @@ namespace ExplorationGame
 
         public bool Contains(string Name)
         {
-            bool hasName = false;
+            bool hasItem = false;
             foreach (Item element in Inv) 
             {
                 if (element.getName() == Name)
                 {
-                    hasName = true;
+                    hasItem = true;
                 }
-                else
-                    hasName = false;
+                
             }
-            return hasName;
+            return hasItem;
         }
 
         public void RemoveItem(Item itm)

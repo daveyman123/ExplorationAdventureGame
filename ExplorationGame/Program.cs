@@ -29,8 +29,12 @@ namespace ExplorationGame
                 Console.ReadLine();
             }
             Console.ForegroundColor = ConsoleColor.White;
-        Game myGame = new Game();
-        myGame.Start();
+            while (Game.getPlayAgain())
+            {
+                Game myGame = new Game();
+                myGame.Start();
+            }
+            ConsoleUtils.QuitConsole();
     }
 }
 }

@@ -54,8 +54,7 @@ namespace ExplorationGame.Scenes
             "\n\n")
             ;
             Console.ForegroundColor = ConsoleColor.White;
-            //ending the game could be done better in game.cs
-            MyGame.myInv.RemoveAll();
+          
 
            
             string[] options = { "Yes", "No, Exit Game" };
@@ -72,10 +71,11 @@ namespace ExplorationGame.Scenes
             switch (choice)
             {
                 case 1:
-                    MyGame.myMainOptionsScene.Run();
+                    Game.setplayAgain(true);
+                    
                     return;
                 case 2:
-                    ConsoleUtils.QuitConsole();
+                    Game.setplayAgain(false);
                     return;
 
             }

@@ -41,6 +41,9 @@ namespace ExplorationGame
 
         //make a soundplayer
         SoundPlayer spookyPlayer;
+
+        //play again field
+        public static bool playAgain = true;
         public Game()
         {
             //instantiate the inventory
@@ -65,12 +68,17 @@ namespace ExplorationGame
             //instantiate soundplayer
             spookyPlayer = new SoundPlayer();
 
+            //instantiate play again field
+            playAgain = true;
+
 
 
         }
 
         public void Start()
         {
+           
+            
             myTitleScene.Run();
             
         }
@@ -78,6 +86,8 @@ namespace ExplorationGame
         public void End()
         {
             myCreditsScene.Run();
+            
+            
         }
 
        
@@ -100,9 +110,18 @@ namespace ExplorationGame
             return this.spookyPlayer;
         }
 
+        //set whether to play again
+        public static void setplayAgain(bool pa)
+        {
+            playAgain = pa;
+        }
 
 
-       
+       //get whether to play again, this is static so we can access and change it outside instantiated classes
+       public static bool getPlayAgain()
+        {
+            return playAgain;
+        }
  
     }
 }
