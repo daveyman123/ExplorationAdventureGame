@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ExplorationGame.Scenes;
+using System.Media;
 namespace ExplorationGame 
 {
     class Game
@@ -37,6 +38,9 @@ namespace ExplorationGame
 
         //ghost defeated field
         protected bool ghostDefeated;
+
+        //make a soundplayer
+        SoundPlayer spookyPlayer;
         public Game()
         {
             //instantiate the inventory
@@ -58,16 +62,22 @@ namespace ExplorationGame
             //goal of game to defeat the ghost
             ghostDefeated = false;
 
+            //instantiate soundplayer
+            spookyPlayer = new SoundPlayer();
+
+
+
         }
 
         public void Start()
         {
-
+            myTitleScene.Run();
             
-            myMainOptionsScene.Run();
+        }
 
-
-
+        public void End()
+        {
+            myCreditsScene.Run();
         }
 
        
@@ -82,6 +92,12 @@ namespace ExplorationGame
         public void setGD(bool gd)
         {
             this.ghostDefeated = gd;
+        }
+
+        //access the soundplayer
+        public SoundPlayer getSP()
+        {
+            return this.spookyPlayer;
         }
 
 

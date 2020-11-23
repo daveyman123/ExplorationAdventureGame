@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Text;
 namespace ExplorationGame.Scenes
 {
     class InHouse : Scene
@@ -32,7 +32,9 @@ namespace ExplorationGame.Scenes
                     return;
                 case 3:
                     // try to leave house
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("You are trapped in here");
+                    Console.ForegroundColor = ConsoleColor.White;
                     MyGame.myInHouseScene.Run();
                     return;
                 case 4:

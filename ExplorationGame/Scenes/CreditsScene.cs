@@ -4,19 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
-
+using System.Media;
+using System.IO;
 namespace ExplorationGame.Scenes
+
 {
     class CreditsScene : Scene
     {
 
-        
+        SoundPlayer sp;
         public CreditsScene(Game game) : base(game)
         {
-            
+            sp = MyGame.getSP();
         }
         public override void Run()
         {
+            // credits sound
+            sp = MyGame.getSP();
+            
+            sp.SoundLocation = "Audio/Fun_House.wav";
+            sp.Load();
+            sp.Play();
             string ghostArt;
             if (MyGame.getGD() == true) 
             {
@@ -38,15 +46,19 @@ namespace ExplorationGame.Scenes
             "https://www.youtube.com/channel/UC_x9TgYAIFHj1ulXjNgZMpQ" +
             "\n" +
             "https://ascii.co.uk/art/ghost was used for a lot of the art" +
-            "\n\n" +
-            "\n" +
+            "https://freesound.org/ for some of the audio" +
+            "\n");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(
             "Would you like to play the game again?" +
             "\n\n")
             ;
-
+            Console.ForegroundColor = ConsoleColor.White;
             //ending the game could be done better in game.cs
             MyGame.myInv.RemoveAll();
-            string[] options = { "Yes", "No" };
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            string[] options = { "Yes", "No, Exit Game" };
             string art = Text_read_helper.ascii(ghostArt);
             Options_helper myOptions = new Options_helper(art, options);
            

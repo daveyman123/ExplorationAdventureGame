@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 
 namespace ExplorationGame.Scenes
 {
     class Kitchen : Scene
     {
+        SoundPlayer spookyPlayer;
         public Kitchen(Game game) : base(game)
         {
+
+            
 
         }
 
@@ -32,7 +36,9 @@ namespace ExplorationGame.Scenes
                         if (!MyGame.myInv.Contains("Knife"))
 
                         {
-
+                        MyGame.getSP().SoundLocation = "Audio/knife-pick-up.wav";
+                        MyGame.getSP().Load();
+                        MyGame.getSP().Play();
                             MyGame.myInv.invAdd(KitchenItems.returnItem("Knife"));
                         }
                         else
@@ -44,8 +50,10 @@ namespace ExplorationGame.Scenes
                     case 2:
                         if (MyGame.myInv.returnItem("Knife") != null)
                         {
-                        
-                            MyGame.myInv.RemoveItem(MyGame.myInv.returnItem("Knife"));
+                        MyGame.getSP().SoundLocation = "Audio/knife-drop.wav";
+                        MyGame.getSP().Load();
+                        MyGame.getSP().Play();
+                        MyGame.myInv.RemoveItem(MyGame.myInv.returnItem("Knife"));
                         }
                         Console.WriteLine("You leave the knife");
                         MyGame.myKitchenScene.Run();

@@ -4,12 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace ExplorationGame
 {
     class Options_helper
     {
-        String[] opt = new String[] { "Go to the Haunted House", "Bowling Alley", "Library", "Arcade", "Exit" };
+        String[] opt = new String[] { "Go to the Haunted House", "Bowling Alley", "Library", "Arcade", "Exit Game" };
         string prompt = "";
 
         public Options_helper(string prompt)
@@ -55,7 +56,10 @@ namespace ExplorationGame
 
             while (!isNumeric || Choice > opt.Length || Choice <= 0)
             {
-                Console.WriteLine("enter a digit between 1-" + opt.Length);
+                Console.WriteLine(output);
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("you must enter a digit between 1-" + opt.Length);
+                Console.ForegroundColor = ConsoleColor.White;
                 x = Console.ReadLine();
 
 
@@ -65,6 +69,7 @@ namespace ExplorationGame
 
                 
             }
+            Console.Clear();
             return Choice;
         }
     }

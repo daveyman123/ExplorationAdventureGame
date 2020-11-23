@@ -17,6 +17,8 @@ namespace ExplorationGame.Scenes
         }
         public override void Run()
         {
+            MyGame.getSP().Stop();
+
             string titleCredit = Text_read_helper.ascii("Main");
         
             

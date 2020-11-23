@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Text;
 namespace ExplorationGame
 {
     class Inventory
@@ -24,11 +24,13 @@ namespace ExplorationGame
         if (!Inv.Contains(item))
         {
 
-
-            Inv.Add(item);
-            Console.WriteLine(item.getName() + " was added to your inventory");
-
-        }
+                Console.ForegroundColor
+            = ConsoleColor.Green;
+                Inv.Add(item);
+            Console.WriteLine(item.getName() + " was added to your inventory", Console.ForegroundColor);
+                Console.ForegroundColor
+= ConsoleColor.White;
+            }
     }
 
     public List<Item> invGet()

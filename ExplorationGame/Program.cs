@@ -28,6 +28,7 @@ namespace ExplorationGame
                 Console.WriteLine("You can continue playing, just be aware that some art might not render properly!");
                 Console.ReadLine();
             }
+            Console.ForegroundColor = ConsoleColor.White;
         Game myGame = new Game();
         myGame.Start();
     }

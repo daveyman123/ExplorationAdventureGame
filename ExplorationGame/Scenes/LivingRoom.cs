@@ -14,7 +14,7 @@ namespace ExplorationGame.Scenes
         }
         public override void Run() {
             Console.WriteLine("You Enter the Living room and a ghost appears behind you!\n");
-            string[] options = { "make a call ghost busters or", "try to FIGHT the ghost?", "Exit Game" };
+            string[] options = { "make a call to ghost busters", "try to FIGHT the ghost?", "Exit Game" };
             string art = Text_read_helper.ascii("ghost");
             Options_helper helper = new Options_helper(art, options);
             int Choice = helper.MenuChoice();
@@ -22,8 +22,9 @@ namespace ExplorationGame.Scenes
             {
                 case 1:
                     Console.WriteLine("You call ghost busters and save the day");
+                    Console.WriteLine("Success!");
                     MyGame.setGD(true);
-                    MyGame.myCreditsScene.Run();
+                    MyGame.End();
                     
                     return;
                 case 2:
@@ -34,7 +35,7 @@ namespace ExplorationGame.Scenes
 
                         Console.ReadLine();
                         MyGame.setGD(true);
-                        MyGame.myCreditsScene.Run();
+                        MyGame.End();
                         
                     }
                     else
@@ -45,7 +46,7 @@ namespace ExplorationGame.Scenes
                      
                     Console.ReadLine();
 
-                    MyGame.myCreditsScene.Run();
+                    MyGame.End();
                     return;
                 case 3:
                     ConsoleUtils.QuitConsole();

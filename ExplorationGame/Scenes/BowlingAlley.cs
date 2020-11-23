@@ -9,6 +9,7 @@ namespace ExplorationGame.Scenes
     class BowlingAlley : Scene
     {
         Items BA_Items;
+        
         public BowlingAlley(Game game) : base(game)
         {
             Item Lint = new Item("some lint", "someone forgot to clean these shoes");
@@ -22,12 +23,16 @@ namespace ExplorationGame.Scenes
             BA_Items.addItem(Lint);
             BA_Items.addItem(Sock);
             BA_Items.addItem(Token);
-
             
+
 
         }
         public override void Run()
         {
+            
+            
+          
+            
             Console.WriteLine("The sound of pins being struck and people chattering around the alley can be heard in the distance");
             //your options are
             string[] op = { "to rent some bowling shoes (this step feels vaguely important)", "Bowl", "Leave Alley", "Exit Game" };
@@ -82,6 +87,9 @@ namespace ExplorationGame.Scenes
 
 
                 case 3:
+                    //inventory system needs lots of work
+                    Item Token = new Item("Arcade token", "it says its worth one credit");
+                    BA_Items.addItem(Token);
                     MyGame.myMainOptionsScene.Run();
                     return;
                 case 4:

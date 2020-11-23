@@ -48,7 +48,8 @@ namespace ExplorationGame.Scenes
                     }
                     else
                     {
-                        Console.WriteLine("that search turns up nothing of interest");
+                        Console.Clear();
+                        Console.WriteLine("a search for {0} turns up nothing of interest, perhaps someone at the arcade knows more about eradicating ghosts", DVCBook);
                     }
                  
 
